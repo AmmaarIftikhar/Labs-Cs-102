@@ -1,0 +1,31 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class MyDrawingPanel extends JPanel
+{
+   //Constants
+   final static int WIDTH = 300;
+   final static int HEIGHT = 250;
+   
+   //variables
+   
+   //constructors
+   public MyDrawingPanel()
+   {
+      setPreferredSize( new Dimension( WIDTH, HEIGHT));
+      setBackground( Color.YELLOW);      
+   }
+   
+   public MyDrawingPanel( int width, int height)
+   {
+      setPreferredSize( new Dimension( width, height));
+      setBackground( Color.YELLOW);
+   }
+   
+   //methods 
+   public void setColor( Color color)
+   {
+      setBackground( color);
+   }
+   
+}

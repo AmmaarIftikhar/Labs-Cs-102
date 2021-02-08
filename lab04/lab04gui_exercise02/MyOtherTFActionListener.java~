@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MyOtherTFActionListener implements ActionListener
+{
+   
+   //constants
+   //variables 
+   
+   //methods 
+   public void actionPerformed( ActionEvent e)
+   {
+      System.out.println( "Text field enter key Pressed" + (TextField)e.getSource().getText());
+      if ( e.getActionCommand().equals( "Maybe"))
+      {
+         ( (Button)e.getSource()).setLabel( "OK");
+      }
+      else
+      {
+         ( (Button)e.getSource()).setLabel( "Maybe");
+      }
+   }
+}

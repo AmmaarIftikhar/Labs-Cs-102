@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class MenuReader
+{
+   public static void main( String[] args)
+   {
+      //Variable declaration
+      ArrayList<MySimpleURLReader> collection;
+      int choice;
+      Scanner scan;
+      
+      //Initiation
+      scan = new Scanner( System.in);
+      collection = new ArrayList<MySimpleURLReader>();
+      
+      Ssytem.out.printf( "%10s","****WELCOME****");
+      
+      do 
+      {
+         System.out.printf( "%5s %5s %5s", "1. ADD URL.", "2. SHOW COLLECTION.", "3. QUIT.");
+         choice = scan.nextInt();
+         
+         if ( choice == 1)
+         {
+            add(collection);
+         }
+         else if ( choice == 2)
+         {
+            display(collection);
+         }
+      } while ( choice != 3);
+   }
+}

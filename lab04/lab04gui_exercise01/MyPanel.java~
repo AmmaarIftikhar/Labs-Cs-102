@@ -1,0 +1,30 @@
+import java.awt.*;
+
+/**
+ *  
+ * @author 
+ * @version 
+ */ 
+public class MyPanel extends Panel
+{
+   // properties
+
+   // constructors
+   public MyPanel()
+   {
+      Button b;
+      
+      setLayout( new GridLayout( 2, 3) );
+      
+      add( new Label( "Welcome to the ONLINE world") );
+
+      add( new TextField( 25) );
+
+      b = new Button( "Neat");
+      add( b);
+      add( new Button( "OK, time to go!") );
+   }
+
+   // methods
+     
+}

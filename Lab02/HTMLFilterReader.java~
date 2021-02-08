@@ -1,0 +1,53 @@
+import cs1.SimpleURLReader;
+
+/**Ammaar Iftikhar
+  * Section 1
+  * 21901257
+  * Lab01a*/
+
+public class HTMLFilterReader extends
+               MySimpleURLReader
+{
+   //Field Declaration
+   private String url;
+   
+   /** constructor calls the superclass
+     * and sends the url as an argument
+     * to it
+     * @param the url */
+   public HTLMFilterReader( String url)
+   {
+      super(url);
+      this.url = url; 
+   }
+   
+   /**getPageContents removes the HTML code
+     * gives access to the page contents 
+     * @return contents*/
+   public String getPageContents()
+   {
+      //Field declaration
+      String contents;
+      String temp;
+      
+      //Initiation
+      contents = "";
+      temp = super.getPageContents();
+      
+      for ( int i = 0; i < temp.length(); i++)
+      {
+         boolean status;
+         status = true;
+         
+         if ( temp.charAt(i) == '<')
+            status = false;
+         else if ( temp.charAt(i) == '>')
+            status = true;
+         
+         if ( status)
+            contents = contents + temp.charAt(i);
+      }
+      
+      return contents;
+   }
+}

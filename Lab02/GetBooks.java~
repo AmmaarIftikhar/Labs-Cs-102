@@ -1,0 +1,43 @@
+import java.util.*;
+
+/**Ammaar Iftikhar
+  * Section 1
+  * 21901257
+  * Lab01a*/
+
+public class GetBooks
+{
+   public static void main(String[] args)
+   {
+      //Field Declaration
+      String url;
+      HTMLFilterReader readIt;
+      String text;
+      ArrayList<String> books;
+      int start;
+      
+      //Initiation
+      url = "https://stars.bilkent.edu.tr/syllabus/view/ECON/102/";
+      books = new ArrayList<String>();
+      
+      //Initialisation
+      readIt = new HTMLFilterReader(url);
+      
+      //Program Code
+      //System.out.println("The contents of the page are: \n" + readIt.getPageContents());
+      //System.out.println( "The number of the lines are: \n" + readIt.getLineCount());
+      
+      text = readIt.getPageContents();
+      start = text.indexOf( "Recommended-Textbook: ");
+      
+      while (dtart <= text.indexOf( "Recommended-Textbook: "));
+      {
+         books.add( text.subString( start + 21, text.indexOf( "\n", start + 21)));
+         start += 21;          
+      }
+      for ( String temp: books)
+      {
+         System.out.println( temp);
+      }
+   }
+}

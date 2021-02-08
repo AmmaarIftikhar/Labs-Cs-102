@@ -1,0 +1,89 @@
+import java.util.*;
+
+/**Ammaar Iftikhar
+  * 21901257
+  * Lab06 Exercise*/
+
+public class HwRecursion
+{
+   public static void printf( int[] array, int i,int f)
+   {
+      
+      if ( i == f)
+      {
+         System.out.print( array[i]);
+      }
+      else
+      {
+         System.out.print( array[i]);
+         printf( array, i + 1, f);
+      }
+   }
+   
+   public static void printR( int[] array, int i,int f)
+   {
+      
+      if ( i == f)
+      {
+         System.out.print( array[i]);
+      }
+      else
+      {
+         printf( array, i + 1, f);
+         System.out.print( array[i]);        
+      }
+   }
+   
+   public static int power( int x, int y)
+   {
+      if ( y == 0)
+      {
+         return 1;
+      }
+      else
+      {
+         return x * power(x, y - 1);
+      }
+   }
+   
+   public static int max( int[] array, int n)
+   {
+      if ( n == 0)
+      {
+         return array[0];
+      }
+      else
+      {
+         return Math.max( array[n], max( array, n - 1));
+      }
+   }
+   
+   public static void printNumbers( int s, int e)
+   {
+      if ( s == e)
+      {
+         System.out.println( String.valueOf( s));
+      }
+      else
+      {
+         System.out.println( String.valueOf( e));
+         printNumbers( s + 1, e);
+      }
+   }
+   
+   public static void storeNumbers( int s, int e, ArrayList<Integer> arrayIntegers)
+   {
+      
+      if ( s == e)
+      {
+         arrayIntegers.add( s);
+      }
+      else
+      {
+         arrayIntegers.add( s);
+         storeNumbers( s + 1, e, arrayIntegers);
+      }      
+   }
+   
+   public static viod 
+}

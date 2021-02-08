@@ -1,0 +1,28 @@
+
+public class LAB01
+{
+   public static void main( String[] args)
+   {
+      //Variable declaration
+      IntBag bag1;
+      int primes;
+      int numberOfPrimes;
+      
+      //instantiation & initiallisation
+      bag1 = new IntBag(100);
+      primes = 3;
+      numberOfPrimes = 1;
+      //program code
+      bag1.add(2);
+      
+      while ( i < 100)
+      {
+         for ( int i = 0; i <  primes; i++)
+         {
+            
+         }
+      }
+      
+      
+   }
+}

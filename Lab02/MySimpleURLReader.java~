@@ -1,0 +1,30 @@
+/**Ammaar Iftikhar
+ * Section 1
+  * 21901257
+  * Lab01a*/
+
+public class MySimpleURLReader
+                  extends SimpleURLReader
+{
+  /** This is thsubclass constructor
+    * @param url the String of the url*/
+   public MySimpleURLReader( String url)
+   {
+      super(url);
+   }
+      
+   /** the getURL method returns the url
+     * @return url*/
+   public String getURL()
+   {
+      return url;
+   }
+   
+   /** the getName() returns the name of the file
+     * to be or being read
+     * @return name of the url read*/
+   public String getName()
+   {
+      return url.substring( url.lastIndexOf("/"), url.length());
+   }
+}
